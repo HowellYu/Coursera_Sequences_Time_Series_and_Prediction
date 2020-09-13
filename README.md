@@ -1,0 +1,32 @@
+## Natural Language Processing in TensorFlow
+DeepLearning.AI TensorFlow Developer Professional Certificate - Course 3
+- **Week 1**: Common Patterns in Time Series
+  - Trend
+  - Outlier
+  - Period
+  - Imputation technique
+  - Non-stationary time series: ts that changes behavior at certain time point
+    - We can only use ML for a period of time
+  - Stationary: behavior does not change
+  - Train test split (training, validation, test):
+    - Fixed partitioning
+    - Roll-forward partitioning: use daily/weekly/monthly data within the training data
+  - Common Metrics
+    - MSE
+    - RMSE: same scale of the original errors
+    - MAE/Mean Abs Deviation: does not penalize large error as much as MSE. We can use MAE if large error is not dangerous
+    - MAPE: P for percentage. `np.abs(errors/x_valid).mean()` shows size of the errors compare to their value
+  - MA
+  - Differencing
+- **Week 2**: Deep Neural Networks for Time Series
+  - Time windows: use a subset of time value as the input windows, use the next time value as the label.
+  - Sequence bias
+  - Linear Regression for Time Series
+  - ffnn for Time Series
+  - Callback for learning rate scheduler that update lr for each epoch
+- **Week 3**: Recurrent Neural Networks for Time Series
+  - RNN: The input/output of RNN is 3-dim: batch size, time step, dim of each time step
+  - Lambda layers: help fix window dataset (2-dim input) before feed it into RNN (3 dim input)
+- **Week 4**: Real-world time series data
+  - LSTM + CNN
+  - Sunspot dataset: https://storage.googleapis.com/laurencemoroney-blog.appspot.com/Sunspots.csv
